@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>障害物回避ランゲーム</title>
   <style>
+    <audio id="bgm" src="Will_you_still_cry.mp3" autoplay loop></audio>
+    // 最初のキー入力でBGM再生（モバイルブラウザ制限対策）
+document.addEventListener('keydown', () => {
+  const bgm = document.getElementById('bgm');
+  if (bgm.paused) bgm.play();
+}, { once: true });
+
     body {
       margin: 0;
       background: #111;
